@@ -81,6 +81,21 @@ class SimpleOptional : CustomStringConvertible {
         } else {
             return false
         }
-        
     }
+    
+    /*
+     * Non-equality comparison operator between two SimpleOptionals
+     *
+     * This operator inverts the logic of the == operator
+     *
+     * - parameter left: The operand to the left of !=
+     * - parameter right: The operand to the right of !=
+     *
+     * - returns: Bool True if one of the optionals has a value and
+     * the other doesn't, false otherwise.
+     */
+    static func != (left: SimpleOptional, right: SimpleOptional) -> Bool {
+        return !(left == right)
+    }
+    
 }
