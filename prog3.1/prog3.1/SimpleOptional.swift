@@ -98,4 +98,6 @@ class SimpleOptional : CustomStringConvertible {
         return !(left == right)
     }
     
+    // Define NIL as a SimpleOptional that has no value
+    let NIL: SimpleOptional = SimpleOptional()
 }
