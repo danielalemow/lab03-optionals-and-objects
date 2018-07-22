@@ -45,4 +45,19 @@ class SimpleOptional : CustomStringConvertible {
             return "nil"
         }
     }
+    
+    // INITIALISERS
+    
+    /**
+     * Initialiser for undefined value.
+     */
+    fileprivate init() {
+        self.value = "Undefined"
+        self.hasValue = false
+    }
+    
+    init(value: Any) {
+        self.value = value
+        self.hasValue = true
+    }
 }
