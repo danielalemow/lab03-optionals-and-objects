@@ -60,4 +60,27 @@ class SimpleOptional : CustomStringConvertible {
         self.value = value
         self.hasValue = true
     }
+    
+    /**
+     * Equality comparison operator between two SimpleOptionals
+     *
+     * Two optionals are considered the same if they both wrap
+     * a value or are both nil. The wrapped values are not compared.
+     * This is useful for checking whether a SimpleOptional has a
+     * value or not.
+     *
+     * - parameter left: The operand to the left of ==
+     * - parameter right: The operand to the right of ==
+     *
+     * - returns: Bool True if both optionals have a value or both
+     * have no value, returns false otherwise.
+     */
+    static func == (left: SimpleOptional, right: SimpleOptional) -> Bool {
+        if left.hasValue == right.hasValue {
+            return true
+        } else {
+            return false
+        }
+        
+    }
 }
