@@ -12,7 +12,7 @@ import Foundation
  * Represents a number as a fraction of two integers.
  */
 
-class Fraction {
+class Fraction : CustomStringConvertible {
     
     // STORED PROPERTIES
     
