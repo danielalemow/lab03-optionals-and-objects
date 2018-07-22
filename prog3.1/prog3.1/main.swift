@@ -8,5 +8,21 @@
 
 import Foundation
 
-print("Hello, World!")
+//Declare variable x as a SimpleOptional
+var x: SimpleOptional
 
+//Assign NIL optional to x
+x = NIL
+
+//Print x
+print("x=\(x)")
+
+
+//Check if x has a value or not
+if x == NIL {
+    print("x has no value")
+} else {
+    //If x has a value, unwrap that value
+    //and print it
+    print("x has a value of \(x.unwrap)")
+}
