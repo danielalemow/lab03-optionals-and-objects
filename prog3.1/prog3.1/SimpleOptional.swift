@@ -40,7 +40,7 @@ class SimpleOptional : CustomStringConvertible {
      */
     var description: String {
         if self.hasValue {
-            return "SimpleOptional(\(self.value)"
+            return "SimpleOptional(\(self.value))"
         } else {
             return "nil"
         }
