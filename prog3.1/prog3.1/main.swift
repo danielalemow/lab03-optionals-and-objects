@@ -26,3 +26,17 @@ if x == NIL {
     //and print it
     print("x has a value of \(x.unwrap)")
 }
+
+//Assign a value of 3 to x
+x = SimpleOptional(value: 3)
+
+print("x=\(x))")
+
+//Check if x has a value or not
+if x != NIL {
+    //If x has a value, unwrap that value
+    //and print it
+    print("x has a value of \(x.unwrap)")
+} else {
+    print("x has no value")
+}
