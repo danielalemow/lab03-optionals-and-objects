@@ -54,7 +54,8 @@ class Complex : CustomStringConvertible {
      - parameter imag Imaginary part of the number
      */
     init(real : Float, imag : Float) {
-        //## IMPLEMENT ##//
+        self.real = real
+        self.imag = imag
     }
     
     /**
@@ -63,7 +64,7 @@ class Complex : CustomStringConvertible {
      Sets complex number to 0
      */
     convenience init() {
-        //## IMPLEMENT ##//
+        self.init(real: 0, imag: 0)
     }
     
     // METHODS
