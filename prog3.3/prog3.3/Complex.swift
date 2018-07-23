@@ -114,7 +114,9 @@ class Complex : CustomStringConvertible {
      - returns: The result of c1/c2.
      */
     static func divide(c1: Complex, by c2: Complex) -> Complex {
-        //## IMPLEMENT ##//
+        let real = (c1.real * c2.real + c1.imag * c2.imag) / c2.magnitude
+        let imag = (c1.imag * c2.real - c1.real * c2.imag) / c2.magnitude
+        return Complex(real: real, imag: imag)
     }
 }
 
