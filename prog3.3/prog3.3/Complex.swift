@@ -25,14 +25,21 @@ class Complex : CustomStringConvertible {
      - returns: Float Magnitude of the complex number
      */
     var magnitude: Float {
-        //## IMPLEMENT ##//
+        return (real * real) + (imag * imag)
     }
     
     /**
      - returns: String String representation of a complex number
      */
     var description: String {
-        //## IMPLEMENT ##//
+        var complex : String
+        complex = "\(real)"
+        if imag >= 0 {
+            complex += "+\(imag)i"
+        } else {
+            complex += "\(imag)i"
+        }
+        return complex
     }
     
     // INITIALISERS
