@@ -120,6 +120,16 @@ class Complex : CustomStringConvertible {
     }
     
     /**
+     Makes a copy of the complex number.
+     
+     - returns: A new instance of Complex which has the same
+       state as the original number.
+    */
+    func copy() -> Complex {
+        return Complex(real: self.real, imag: self.imag)
+    }
+    
+    /**
      + operator between two Complex numbers
      */
     static func +(c1: Complex, c2: Complex) -> Complex {
