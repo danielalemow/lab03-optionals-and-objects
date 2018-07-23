@@ -90,7 +90,7 @@ class Complex : CustomStringConvertible {
      - returns: The result of c2 - c1.
      */
     static func subtract(c1: Complex, from c2: Complex) -> Complex {
-        //## IMPLEMENT ##//
+        return Complex(real: c1.real - c2.real, imag: c1.imag - c2.imag)
     }
     
     /**
