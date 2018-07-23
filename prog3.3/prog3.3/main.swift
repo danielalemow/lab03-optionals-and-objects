@@ -20,6 +20,18 @@ var y: Complex = Complex(real: -0.5, imag: 2.3)
 //Show new object's state
 print("y=\(y)")
 
+//Declare a new Complex reference and set it equal
+//to another object's reference
+var z = x.copy()
+//Change the new object's state
+z.imag = 1.0
+//Show the new object's state
+print("z=\(z)")
+//Show the original object's state
+print("x=\(x)")
+
+print("")
+
 //Show the result of addition of complex objects
 print("x+y=\(x+y)")
 //Show the result of subtraction of complex objects
