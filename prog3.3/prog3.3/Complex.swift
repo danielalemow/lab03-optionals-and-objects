@@ -78,7 +78,7 @@ class Complex : CustomStringConvertible {
      - returns: The result of c1 + c2.
      */
     static func add(c1: Complex, to c2: Complex) -> Complex {
-        //## IMPLEMENT ##//
+        return Complex(real: c1.real + c2.real, imag: c1.imag + c2.imag)
     }
     
     /**
