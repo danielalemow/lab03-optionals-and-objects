@@ -18,11 +18,10 @@ x = nil
 print("x=\(x as Int?)")
 
 //Check if x has a value or not
-if x == nil {
-    print("x has no value")
+if let xunwrapped = x {
+    print("x has a value of \(xunwrapped)")
 } else {
-    //if x has a value, unwrap that value and print it
-    print("x has a value of \(x!)")
+    print("x has no value")
 }
 
 //Assign a value of 3 to x
@@ -32,10 +31,8 @@ x = 3
 print("x=\(x as Int?)")
 
 //Check if x has a value or not
-if x != nil {
-    //If x has a value, unwrap that value
-    //and print it
-    print("x has a value of \(x!)")
+if let xunwrapped = x {
+    print("x has a value of \(xunwrapped)")
 } else {
     print("x has no value")
 }
@@ -50,9 +47,9 @@ z = Fraction(num: 1, den: 3)
 print("z=\(z as Fraction?)")
 
 //Check if z has a value or not
-if z != nil {
-    print("z has a value of \(z!)")
-    print("The decimal property of z's value is \(z!.decimal)")
+if let zunwrapped = z {
+    print("z has a value of \(zunwrapped)")
+    print("The decimal property of z's value is \(zunwrapped.decimal)")
 } else {
     print("z has no value")
 }
