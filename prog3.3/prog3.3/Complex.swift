@@ -102,7 +102,7 @@ class Complex : CustomStringConvertible {
      - returns: The result of c1*c2.
      */
     static func multiply(c1: Complex, by c2: Complex) -> Complex {
-        //## IMPLEMENT ##//
+        return Complex(real: (c1.real * c2.real) - (c1.imag * c2.imag), imag : (c1.real * c2.imag) + (c1.imag * c2.real))
     }
     
     /**
