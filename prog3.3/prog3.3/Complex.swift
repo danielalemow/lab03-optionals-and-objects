@@ -118,60 +118,65 @@ class Complex : CustomStringConvertible {
         let imag = (c1.imag * c2.real - c1.real * c2.imag) / c2.magnitude
         return Complex(real: real, imag: imag)
     }
-}
+    
+    /**
+     + operator between two Complex numbers
+     */
+    static func +(c1: Complex, c2: Complex) -> Complex {
+        return add(c1: c1, to: c2)
+    }
+    
+    /**
+     - operator between two Complex numbers
+     */
+    static func -(c1: Complex, c2: Complex) -> Complex {
+        return subtract(c1: c1, from: c2)
+    }
+    
+    /**
+     * operator between two Complex numbers
+     */
+    static func *(c1: Complex, c2: Complex) -> Complex {
+        return multiply(c1: c1, by: c2)
+    }
+    
+    /**
+     / operator between two Complex numbers
+     */
+    static func /(c1: Complex, c2: Complex) -> Complex {
+        return divide(c1: c1, by: c2)
+    }
+    
+    /**
+     + operator between a Complex number and a Float
+     */
+    static func +(c: Complex, x: Float) -> Complex {
+        let c2 = Complex(real: x, imag: 0.0)
+        return add(c1: c, to: c2)
+    }
+    
+    /**
+     - operator between a Complex number and a Float
+     */
+    static func -(c: Complex, x: Float) -> Complex {
+        let c2 = Complex(real: x, imag: 0.0)
+        return subtract(c1: c, from: c2)
+    }
+    
+    /**
+     * operator between a Complex number and a Float
+     */
+    static func *(c: Complex, x: Float) -> Complex {
+        let c2 = Complex(real: x, imag: 0.0)
+        return multiply(c1: c, by: c2)
+    }
+    
+    /**
+     / operator between a Complex number and a Float
+     */
+    static func /(c: Complex, x: Float) -> Complex {
+        let c2 = Complex(real: x, imag: 0.0)
+        return divide(c1: c, by: c2)
+    }
 
-/**
- + operator between two Complex numbers
- */
-func +(c1: Complex, c2: Complex) -> Complex {
-    //## IMPLEMENT ##//
-}
-
-/**
- - operator between two Complex numbers
- */
-func -(c1: Complex, c2: Complex) -> Complex {
-    //## IMPLEMENT ##//
-}
-
-/**
- * operator between two Complex numbers
- */
-func *(c1: Complex, c2: Complex) -> Complex {
-    //## IMPLEMENT ##//
-}
-
-/**
- / operator between two Complex numbers
- */
-func /(c1: Complex, c2: Complex) -> Complex {
-    //## IMPLEMENT ##//
-}
-
-/**
- + operator between a Complex number and a Float
- */
-func +(c: Complex, x: Float) -> Complex {
-    //## IMPLEMENT ##//
-}
-
-/**
- - operator between a Complex number and a Float
- */
-func -(c: Complex, x: Float) -> Complex {
-    //## IMPLEMENT ##//
-}
-
-/**
- * operator between a Complex number and a Float
- */
-func *(c: Complex, x: Float) -> Complex {
-    //## IMPLEMENT ##//
-}
-
-/**
- / operator between a Complex number and a Float
- */
-func /(c: Complex, x: Float) -> Complex {
-    //## IMPLEMENT ##//
 }
